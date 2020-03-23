@@ -32,3 +32,65 @@ main {
   margin-bottom: 1em;
   font-weight: 500;
 }
+
+.signup__trial {
+  text-align: center;
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 5px;
+  box-shadow: 0 7px 2px rgba(0, 0, 0, 0.3);
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.signup__trial > span {
+  font-weight: 600;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1.25em;
+  border-radius: 5px;
+  box-shadow: 0 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.signup__input {
+  padding: 0.85em 1.75em;
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  margin-bottom: 1.125em;
+  font-family: inherit;
+  font-weight: 600;
+  color: hsl(249, 10%, 26%);
+}
+
+.signup__input::placeholder {
+  color: hsl(249, 10%, 26%);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.signup__btn {
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+}
+
+.signup__terms {
+  color: hsl(246, 25%, 77%);
+  text-align: center;
+  font-size: 0.65em;
+}
+
+.signup__terms > span {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
