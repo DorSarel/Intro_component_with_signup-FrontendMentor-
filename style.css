@@ -86,11 +86,16 @@ main {
 }
 
 .error-msg {
+  visibility: hidden;
   position: absolute;
   bottom: 0;
   left: 0;
   color: hsl(0, 100%, 74%);
   font-size: 0.75rem;
+}
+
+.signup__input.signup__input--error + .error-msg {
+  visibility: visible;
 }
 
 .signup__btn {

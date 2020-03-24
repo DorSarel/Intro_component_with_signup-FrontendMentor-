@@ -14,24 +14,27 @@ const validateForm = () => {
   }
 
   if (!isEmailValid(formInputNodes['email'].value)) {
-    formInputNodes['email'].classList.add('signup__input--error');
+    setErrorOnInput(formInputNodes['email'], 'Email is not valid');
     isFormValid = false;
   }
 
   if (formInputNodes['password'].value.length < 6) {
-    formInputNodes['password'].classList.add('signup__input--error');
+    setErrorOnInput(formInputNodes['password'], 'Password must longer then 5');
     isFormValid = false;
   }
 
   if (isFormValid) {
     alert('Form is valid! Sending data...');
+    for (let inputNode in formInputNodes) {
+      resetFormValues(formInputNodes[inputNode]);
+    }
   }
 };
 
 const checkIfNodeEmpty = inputNode => {
   let isEmpty = false;
   if (inputNode.value.trim() === '') {
-    inputNode.classList.add('signup__input--error');
+    setErrorOnInput(inputNode, 'Input can not be blank');
     return true;
   } else {
     inputNode.classList.remove('signup__input--error');
@@ -48,3 +51,17 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   validateForm();
 });
+
+const setErrorOnInput = (input, errorMsg) => {
+  const signupControl = input.parentElement;
+  const errorInput = signupControl.querySelector('.error-msg');
+
+  console.log(signupControl);
+  console.log(errorInput);
+  input.classList.add('signup__input--error');
+  errorInput.innerText = errorMsg;
+};
+
+const resetFormValues = inputNode => {
+  inputNode.value = '';
+};
