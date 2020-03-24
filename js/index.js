@@ -19,7 +19,10 @@ const validateForm = () => {
   }
 
   if (formInputNodes['password'].value.length < 6) {
-    setErrorOnInput(formInputNodes['password'], 'Password must longer then 5');
+    setErrorOnInput(
+      formInputNodes['password'],
+      'Password length must be longer than 5'
+    );
     isFormValid = false;
   }
 
