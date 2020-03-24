@@ -33,16 +33,49 @@
           <span>Try it free 7 days</span> then $20/mo. thereafter
         </p>
         <form class="signup__form">
-          <input type="text" class="signup__input" name="first_name" placeholder="First Name" />
-          <input type="text" class="signup__input" name="last_name" placeholder="Last Name" />
-          <input type="email" class="signup__input" name="user_email" placeholder="Email" />
-          <input type="password" class="signup__input" name="user_password" placeholder="Password" />
+          <div class="signup__control">
+            <input
+              type="text"
+              class="signup__input"
+              name="first_name"
+              placeholder="First Name"
+            />
+            <small class="error-msg"></small>
+          </div>
+          <div class="signup__control">
+            <input
+              type="text"
+              class="signup__input"
+              name="last_name"
+              placeholder="Last Name"
+            />
+            <small class="error-msg"></small>
+          </div>
+          <div class="signup__control">
+            <input
+              type="email"
+              class="signup__input"
+              name="user_email"
+              placeholder="Email"
+            />
+            <small class="error-msg"></small>
+          </div>
+          <div class="signup__control">
+            <input
+              type="password"
+              class="signup__input"
+              name="user_password"
+              placeholder="Password"
+            />
+            <small class="error-msg">Error Message</small>
+          </div>
           <button class="signup__btn">Claim your free trial</button>
           <p class="signup__terms">
-            By clicking the button, you are agreeing to our <span>Terms and Services</span>
+            By clicking the button, you are agreeing to our
+            <span>Terms and Services</span>
           </p>
-        </div>
         </form>
+      </div>
     </main>
     <footer>
       <p>
