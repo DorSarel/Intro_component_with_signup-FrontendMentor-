@@ -126,6 +126,9 @@ footer a {
     display: flex;
     padding: 7em 5em;
     justify-content: space-between;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .intro {
@@ -149,5 +152,13 @@ footer a {
 
   .intro__title {
     font-size: 3rem;
+  }
+
+  .signup__form {
+    padding: 2.5em;
+  }
+
+  .signup__input {
+    padding: 1.25em 2em;
   }
 }
